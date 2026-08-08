@@ -1,0 +1,152 @@
+.new-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.new-heading {
+    font-size: clamp(2rem, 5vw, 2.85rem);
+}
+
+.new-progress-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding: 20px;
+
+}
+
+.new-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.new-step-number {
+    width: 24px;
+    height: 24px;
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-light);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.new-step-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.new-step.active .new-step-number {
+    color: var(--surface);
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.new-step.active .new-step-text {
+    color: var(--primary);
+}
+
+.error {
+    color: #dc2626;
+    font-size: 0.9rem;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: #d1d5db;
+
+    user-select: none;
+}
+
+/* ---TABLET--- */
+@media (max-width: 768px) {
+
+    .new-container {
+        padding: 20px;
+    }
+
+    .new-progress-bar {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .new-step-text {
+        font-size: 1rem;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/* ---MOBILE--- */
+@media (max-width: 600px) {
+
+    .new-container {
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .new-heading {
+        text-align: center;
+    }
+
+    .new-progress-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        scrollbar-width: none;
+    }
+
+    .new-progress-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .new-step {
+        width: 100%;
+    }
+
+    .new-step-number {
+        width: 30px;
+        height: 30px;
+    }
+
+    .new-step-text {
+        font-size: 0.95rem;
+    }
+
+}
+
+/* ---SMALL PHONES--- */
+@media (max-width: 400px) {
+
+    .new-container {
+        padding: 12px;
+    }
+
+    .new-heading {
+        font-size: 1.8rem;
+    }
+
+}
